@@ -27,3 +27,20 @@ body {
     margin: 5px;
     cursor: pointer;
   }
+
+ @media (max-width: 768px) {
+    table {
+      width: 80%;
+      height: auto;
+    }
+  
+    td {
+      width: 33.33%;
+      height: 100px;
+      font-size: 30px;
+    }
+  
+    button {
+      font-size: 24px;
+    }
+  }
