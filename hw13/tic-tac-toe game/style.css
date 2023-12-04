@@ -1,8 +1,14 @@
 body {
     text-align: center;
-    font-family: "Permanent Marker", cursive;
+    font-family: "Handlee";
     background-color:darkorange;
   }
+
+@font-face {
+    font-family: 'Handlee';
+    src: url('./Handlee-Regular.ttf') format('truetype');
+  }
+
   table {
     width: 500px;
     height: 500px;
@@ -17,7 +23,7 @@ body {
     cursor: pointer;
   }
   button {
-    font-family: "Permanent Marker", cursive;
+    font-family: "Handlee";
     background-color: slateblue;
       color: black;
     padding: 15px 32px;
