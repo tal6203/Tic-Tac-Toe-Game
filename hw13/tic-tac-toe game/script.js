@@ -73,9 +73,9 @@ function checkWin(currentPlayer) {
       td[cell1].innerHTML == td[cell2].innerHTML &&
       td[cell2].innerHTML == td[cell3].innerHTML
     ) {
-      td[cell1].style.backgroundColor = "purple";
-      td[cell2].style.backgroundColor = "purple";
-      td[cell3].style.backgroundColor = "purple";
+      td[cell1].style.backgroundColor = "#ff7322";
+      td[cell2].style.backgroundColor = "#ff7322";
+      td[cell3].style.backgroundColor = "#ff7322";
       document.getElementById("the_winner").innerHTML =
         `The winner is: ${currentPlayer}`;
       status_turns.innerHTML = "";
