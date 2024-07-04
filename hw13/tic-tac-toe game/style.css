@@ -1,53 +1,97 @@
+/* General Styles */
 body {
-    text-align: center;
-    font-family: "Handlee";
-    background-color:darkorange;
-  }
+  text-align: center;
+  font-family: "Handlee", sans-serif;
+  background: linear-gradient(to right, #f83600, #f9d423);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
 
 @font-face {
-    font-family: 'Handlee';
-    src: url('./Handlee-Regular.ttf') format('truetype');
-  }
+  font-family: 'Handlee';
+  src: url('./Handlee-Regular.ttf') format('truetype');
+}
 
+/* Title Styles */
+#title {
+  text-decoration: underline;
+  font-size: 3em;
+  margin-top: 20px;
+}
+
+/* Table Styles */
+table {
+  width: 80%;
+  max-width: 500px;
+  height: 80%;
+  max-height: 500px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+td {
+  width: 33.33%;
+  height: 100px;
+  font-size: 3em;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s;
+}
+
+td:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Button Styles */
+button {
+  font-family: "Handlee", sans-serif;
+  background-color: #4a90e2;
+  color: #fff;
+  padding: 15px 32px;
+  text-align: center;
+  font-weight: bolder;
+  border-radius: 8px;
+  font-size: 1.5em;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #357ab7;
+}
+
+/* Border Styles for Table Cells */
+.vert {
+  border-left: 5px solid #fff;
+  border-right: 5px solid #fff;
+}
+
+.hori {
+  border-top: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   table {
-    width: 500px;
-    height: 500px;
-    margin: auto;
-    border-collapse:collapse;   
-  }
-  td {
-    border: 5px black solid;
-    width: 100px;
-    height: 100px;
-    font-size: 50px;
-    cursor: pointer;
-  }
-  button {
-    font-family: "Handlee";
-    background-color: slateblue;
-      color: black;
-    padding: 15px 32px;
-    text-align: center;
-    font-weight: bolder;
-    border-radius: 8px;
-    font-size: 30px;
-    margin: 5px;
-    cursor: pointer;
+    width: 90%;
+    height: auto;
   }
 
- @media (max-width: 768px) {
-    table {
-      width: 80%;
-      height: auto;
-    }
-  
-    td {
-      width: 33.33%;
-      height: 100px;
-      font-size: 30px;
-    }
-  
-    button {
-      font-size: 24px;
-    }
+  td {
+    height: 80px;
+    font-size: 2em;
   }
+
+  button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+  }
+}
