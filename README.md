@@ -63,5 +63,9 @@ Contributions are welcome! If you would like to contribute to this project, plea
 This project is open-source and available under the [MIT License](LICENSE).
 
 
-https://github.com/tal6203/Tic-Tac-Toe-Game/assets/112417918/a62b39be-6e6e-474c-a837-2d3260f28257
+
+https://github.com/tal6203/Tic-Tac-Toe-Game/assets/112417918/70a5572c-9f69-4b4a-b043-54401833ca29
+
+
+
 
