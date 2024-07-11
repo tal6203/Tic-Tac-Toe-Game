@@ -1,7 +1,7 @@
 
 const game_data = {
-  turns : 0,
-  arr:  ["", "", "", "", "", "", "", "", ""],
+  turns: 0,
+  arr: ["", "", "", "", "", "", "", "", ""],
   flag: false,
 }
 
@@ -25,12 +25,15 @@ let player1vsplayer2 = document.getElementById("player1vsplayer2");
 let gameWith_Computer = document.getElementById("player1vscomputer");
 player1vsplayer2.addEventListener("click", game1vs1);
 gameWith_Computer.addEventListener("click", gameWithComputer);
+restart.style.display = "none";
 restart.addEventListener("click", restGame);
 
 
 
 
+
 function game1vs1() {
+  restart.style.display = "inline";
   player1vsplayer2.remove();
   gameWith_Computer.remove();
   document.getElementById("turns").innerHTML = "X's your turn";
@@ -80,7 +83,7 @@ function checkWin(currentPlayer) {
         `The winner is: ${currentPlayer}`;
       status_turns.innerHTML = "";
       return game_data.flag = true;
-    } 
+    }
   }
   if (!game_data.arr.includes("")) {
     status_turns.innerHTML = "";
@@ -100,20 +103,22 @@ function restGame() {
     e.innerHTML = "";
     e.style.backgroundColor = "";
   });
+  restart.style.display = "none";
   document.body.appendChild(player1vsplayer2);
   document.body.appendChild(gameWith_Computer);
   td.forEach((cell) => {
-    cell.removeEventListener("click",addClick);
+    cell.removeEventListener("click", addClick);
     cell.removeEventListener("click", gamePlay);
   })
 }
 
 function gameWithComputer() {
+  restart.style.display = "inline";
   player1vsplayer2.remove();
   gameWith_Computer.remove();
   document.getElementById("turns").innerHTML = "X's your turn";
   td.forEach((cell) => {
-    cell.removeEventListener("click",addClick)
+    cell.removeEventListener("click", addClick)
     cell.addEventListener("click", gamePlay);
   });
 }
@@ -121,7 +126,7 @@ function gameWithComputer() {
 function computerPlayerLocation() {
   let computer_player = Math.floor(Math.random() * 9);
   while ((!game_data.flag) && game_data.turns % 2 != 0) {
-    if(td[computer_player].innerHTML != ""){
+    if (td[computer_player].innerHTML != "") {
       computer_player = Math.floor(Math.random() * 9);
       continue;
     }
